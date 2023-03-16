@@ -186,9 +186,11 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
           Dismissible(
             key: ValueKey(appState.favorites[i]),
             onDismissed: (direction) {
-              setState(() {
-                appState.favorites.removeAt(i);
-              });
+              setState(
+                () {
+                  appState.favorites.removeAt(i);
+                },
+              );
             },
             background: Container(
               color: Colors.red,
